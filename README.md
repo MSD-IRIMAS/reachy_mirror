@@ -1,5 +1,12 @@
 # Reachy_mirror: a mirroring application for Reachy
 Version en français en dessous
+## Acknowlegements
+This software uses:
+- [Numpy](https://github.com/numpy/numpy) [(licence)](https://github.com/numpy/numpy/blob/main/LICENSE.txt)
+- [OpenCV](https://github.com/opencv/opencv-python) [(licence)](https://github.com/opencv/opencv-python/blob/4.x/LICENSE.txt)
+- [Mediapipe](https://github.com/google-ai-edge/mediapipe) [(licence)](https://github.com/google-ai-edge/mediapipe/blob/master/LICENSE)
+- [SciPy](https://github.com/scipy/scipy) [(licence)](https://github.com/scipy/scipy/blob/main/LICENSE.txt)
+- [Reachy SDK](https://github.com/pollen-robotics/reachy-sdk) [(licence)](https://github.com/pollen-robotics/reachy-sdk/blob/main/LICENSE)
 ## Requirements
 - python3
 - pip
@@ -48,6 +55,13 @@ English version on top
 - wget
 - Un robot Reachy connecté à un réseau local
 - Un ordinateur connecté au même réseau local (peut être l'ordinateur interne de Reachy)
+## Acquiescements
+Ce logiciel utilise:
+- [Numpy](https://github.com/numpy/numpy) [(licence)](https://github.com/numpy/numpy/blob/main/LICENSE.txt)
+- [OpenCV](https://github.com/opencv/opencv-python) [(licence)](https://github.com/opencv/opencv-python/blob/4.x/LICENSE.txt)
+- [Mediapipe](https://github.com/google-ai-edge/mediapipe) [(licence)](https://github.com/google-ai-edge/mediapipe/blob/master/LICENSE)
+- [SciPy](https://github.com/scipy/scipy) [(licence)](https://github.com/scipy/scipy/blob/main/LICENSE.txt)
+- [Reachy SDK](https://github.com/pollen-robotics/reachy-sdk) [(licence)](https://github.com/pollen-robotics/reachy-sdk/blob/main/LICENSE)
 ## Instalation
 ### 1. télécharger le modèle:
 ```bash
