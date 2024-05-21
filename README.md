@@ -8,11 +8,11 @@ This software uses:
 - [SciPy](https://github.com/scipy/scipy) [(licence)](https://github.com/scipy/scipy/blob/main/LICENSE.txt)
 - [Reachy SDK](https://github.com/pollen-robotics/reachy-sdk) [(licence)](https://github.com/pollen-robotics/reachy-sdk/blob/main/LICENSE)
 ## Requirements
-- python3
-- pip
-- wget
-- a Reachy robot connected to a local network
-- a computer connected to the same local network (can be reachy's internal computer)
+- python3.
+- pip.
+- wget.
+- a Reachy robot connected to a local network.
+- a computer connected to the same local network. (can be reachy's internal computer)
 ## Instalation
 ### 1. download the model:
 ```bash
@@ -29,17 +29,17 @@ python3 reachy_mirror.py [-h] [-m] [-d] ip
 ```
 
 ```
-Mirror the movement of the arms of the person in front of the robot
+Mirror the movement of the arms of the person in front of the robot.
 
 positional arguments:
-  ip              reachy's IP adress
+  ip              reachy's IP adress.
 
 options:
-  -h, --help      Show this help message and exit
-  -m, --mirrored  Disable the mirror effet (with this flag, mooving the left arm will moove the robot's left arm instead of the right arm)
-  -d, --debug     Activate debug mode (run localy and uses the PC webcam)
+  -h, --help      Show this help message and exit.
+  -m, --mirrored  Disable the mirror effet (with this flag, mooving the left arm will moove the robot's left arm. instead of the right arm)
+  -d, --debug     Activate debug mode. (run localy and uses the PC webcam)
 
-To exit the program when running, press q
+To exit the program when running, press q.
 ```
 
 ### To quit the program, press q
@@ -48,13 +48,13 @@ To exit the program when running, press q
 </br>
 
 # Reachy_mirror: une application "miroir" pour Reachy
-English version on top, [here](#reachy_mirror-a-mirroring-application-for-reachy)
+English version on top, [here](#reachy_mirror-a-mirroring-application-for-reachy).
 ## Prérequis
-- python3
-- pip
-- wget
-- Un robot Reachy connecté à un réseau local
-- Un ordinateur connecté au même réseau local (peut être l'ordinateur interne de Reachy)
+- python3.
+- pip.
+- wget.
+- Un robot Reachy connecté à un réseau local.
+- Un ordinateur connecté au même réseau local. (peut être l'ordinateur interne de Reachy)
 ## Acquiescements
 Ce logiciel utilise:
 - [Numpy](https://github.com/numpy/numpy) [(licence)](https://github.com/numpy/numpy/blob/main/LICENSE.txt)
@@ -78,17 +78,17 @@ python3 reachy_mirror.py [-h] [-m] [-d] ip
 ```
 
 ```
-Reproduit le mouvements des bras de la personne se trouvant en face du robot
+Reproduit le mouvements des bras de la personne se trouvant en face du robot.
 
 arguments positionels:
-  ip              l'addresse IP de Reachy
+  ip              l'addresse IP de Reachy.
 
 options:
-  -h, --help      Montre ce message et termine le programme
-  -m, --mirrored  Déactive l'effet miroir (avec ce drapeau, bouger le bras gauche bougera le bras gauche du robot au lieu du bras droit)
-  -d, --debug     Active le mode de débogueage (s'exécute localement et utilise la caméra du PC)
+  -h, --help      Montre ce message et termine le programme.
+  -m, --mirrored  Déactive l'effet miroir (avec ce drapeau, bouger le bras gauche bougera le bras gauche du robot. au lieu du bras droit)
+  -d, --debug     Active le mode de débogueage. (s'exécute localement et utilise la caméra du PC)
 
-Pour quitter le programme, appuyez sur q
+Pour quitter le programme, appuyez sur q.
 ```
 
 ### Pour quitter le programme, appuyez sur q

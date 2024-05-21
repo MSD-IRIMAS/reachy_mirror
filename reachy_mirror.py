@@ -40,14 +40,14 @@ def draw_landmarks_on_image(rgb_image, detection_result):
 
 def picture_to_reachy(vector: np.ndarray) -> np.ndarray:
     '''
-    Transforms a vertor in the picture coordinate system (x right, y down, z back) to a vector in Reachy's coordinate system (x front, y left, z up)
+    Transforms a vertor in the picture coordinate system (x right, y down, z back) to a vector in Reachy's coordinate system. (x front, y left, z up)
     '''
     assert vector.shape == (3,)
     return np.array([-vector[2], vector[0], -vector[1]])
 
 def limitize(vector: np.ndarray, right: bool=False) -> np.ndarray:
     '''
-    Puts a vector in Reachy's coordinate system inside Reachy's physical limits
+    Puts a vector in Reachy's coordinate system inside Reachy's physical limits.
     '''
     assert vector.shape == (3,)
     x_max=0.6
@@ -80,7 +80,7 @@ def limitize(vector: np.ndarray, right: bool=False) -> np.ndarray:
 
 def limitize_head(vector: np.ndarray) -> np.ndarray:
     '''
-    Puts a rotation in Reachy's coordinate system inside Reachy's physical limits
+    Puts a rotation in Reachy's coordinate system inside Reachy's physical limits.
     '''
     assert vector.shape == (3,)
 
@@ -109,7 +109,7 @@ def limitize_head(vector: np.ndarray) -> np.ndarray:
 
 def flip(vector: np.ndarray, axis: chr ='y') -> np.ndarray:
     '''
-    Flips a vector along a given axis
+    Flips a vector along a given axis.
     '''
     assert vector.shape == (3,)
 
@@ -120,13 +120,13 @@ def flip(vector: np.ndarray, axis: chr ='y') -> np.ndarray:
     elif axis=='z':
         vector[2] = -vector[2]
     else:
-        raise ValueError('Axis incorect')
+        raise ValueError('Axis incorect.')
     
     return vector
 
 def find_euler(X: np.ndarray, Y: np.ndarray, Z: np.ndarray) -> list:
     '''
-    Finds the euler angles of the rotation between the reference base and the XYZ base
+    Finds the euler angles of the rotation between the reference base and the XYZ base.
     '''
     assert X.shape == (3,)
     assert Y.shape == (3,)
@@ -144,7 +144,7 @@ def find_euler(X: np.ndarray, Y: np.ndarray, Z: np.ndarray) -> list:
 
 def find_rotation(vector: np.ndarray, reference_vector: np.ndarray, method: str='Quaternions')-> np.ndarray:
     '''
-    Finds the rotation matrix between the reference vector and the target vector using either the Euler method, the Rodrigues method or the Quaternions method (default)
+    Finds the rotation matrix between the reference vector and the target vector using either the Euler method, the Rodrigues method or the Quaternions method. (default)
     '''
     assert vector.shape == (3,)
     assert reference_vector.shape == (3,)
@@ -179,7 +179,7 @@ def find_rotation(vector: np.ndarray, reference_vector: np.ndarray, method: str=
         else:
             return R.from_quat([n[0],n[1],n[2],w]).as_matrix()
     else: 
-        raise ValueError("Method not found")
+        raise ValueError("Method not found.")
 
 def create_pose_matrix(rotation: np.array, translation: np.array) -> np.array:
     assert rotation.shape == (3,3)
@@ -198,10 +198,10 @@ async def moove():
     await right
 
 # STEP 1 TER: Parse arguments
-parser = argparse.ArgumentParser(prog='Reachy mirror', description='Mirror the movement of the arms of the person in front of the robot', epilog='To exit the program when running, press q')
-parser.add_argument('-m', '--mirrored', action='store_false', help="Disable the mirror effet (with this flag, mooving the left arm will moove the robot's left arm instead of the right arm)")
-parser.add_argument('-d', '--debug', action='store_true', help="Activate debug mode (run localy and uses the PC webcam instead of Reachy's)")
-parser.add_argument('ip', type=str, help="reachy's IP adress")
+parser = argparse.ArgumentParser(prog='Reachy mirror', description='Mirror the movement of the arms of the person in front of the robot.', epilog='To exit the program when running, press q.')
+parser.add_argument('-m', '--mirrored', action='store_false', help="Disable the mirror effet. (with this flag, mooving the left arm will moove the robot's left arm instead of the right arm)")
+parser.add_argument('-d', '--debug', action='store_true', help="Activate debug mode. (run localy and uses the PC webcam instead of Reachy's)")
+parser.add_argument('ip', type=str, help="reachy's IP adress.")
 args = parser.parse_args()
 mirrored = args.mirrored
 debug = args.debug
@@ -259,10 +259,10 @@ reachy.turn_on('reachy')
 if debug:
     cap = cv.VideoCapture(0)
     if not cap.isOpened():
-        print("Cannot open camera")
+        print("Cannot open camera.")
         exit()
 
-print("To quit, press q")
+print("To quit, press q.")
 while True:
     has_to_moove = False
     has_to_moove_head = False
@@ -337,7 +337,7 @@ while True:
             right_matrix = create_pose_matrix(right_angles, last_vector_right)
         else:
             '''
-            #Dummy matrixes for debuging, use when something goes worng
+            #Dummy matrixes for debuging, use when something goes worng.
             left_matrix = np.array([
                 [0,0,-1,last_vector_left[0]],
                 [0,1,0,last_vector_left[1]],
