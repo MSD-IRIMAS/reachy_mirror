@@ -1,5 +1,5 @@
 # Reachy_mirror: a mirroring application for Reachy
-Version en français en dessous
+Version en français en dessous, [ici](#reachy_mirror-une-application-miroir-pour-reachy)
 ## Acknowlegements
 This software uses:
 - [Numpy](https://github.com/numpy/numpy) [(licence)](https://github.com/numpy/numpy/blob/main/LICENSE.txt)
@@ -48,7 +48,7 @@ To exit the program when running, press q
 </br>
 
 # Reachy_mirror: une application "miroir" pour Reachy
-English version on top
+English version on top, [here](#reachy_mirror-a-mirroring-application-for-reachy)
 ## Prérequis
 - python3
 - pip
